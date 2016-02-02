@@ -36,6 +36,12 @@ def avoids(word, forbidden):
 			if letter == forbid:
 				return False
 	return True
+	
+def avoids2(word, forbidden):
+	for letter in word:
+		if letter in forbidden:
+			return False
+	return True
 
 def censor_list():
 	forbidden = input('> ')
@@ -57,6 +63,12 @@ def uses_only(word, good_letters):
 			return False
 		check = False
 	return True
+	
+def uses_only2(word, available):
+	for letter in word:
+		if letter not in available:
+			return False
+	return True
 
 print(uses_only('aaa', 'a'))
 print(uses_only('aaabbba', 'a'))
@@ -73,6 +85,9 @@ def uses_all(word, required_letters):
 			return False
 		passes = False
 	return True
+	
+def uses_all2(word, required):
+	return uses_only(required, word)
 		
 print(uses_all('aaa', 'a'))
 print(uses_all('aaabbba', 'a'))
