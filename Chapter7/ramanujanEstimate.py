@@ -1,7 +1,5 @@
 import math
 
-
-
 def estimate_pi():
 	coefficient = 2 * math.sqrt(2) / 9801
 	sum = 0.0
