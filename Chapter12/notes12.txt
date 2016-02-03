@@ -1,0 +1,10 @@
+a = 1
+b = 2
+
+#old way of switching variables
+temp = a
+a = b
+b = temp
+
+#the python way
+a, b = b, a
