@@ -1,0 +1,6 @@
+fin = open('words.txt')
+
+words = dict()
+
+for word in words:
+	
